@@ -16,7 +16,7 @@
 
 - (void)buttonPressed:(UIButton *)sender;
 {
-    [self.beerPercentageTextField resignFirstResponder];
+   // [self.beerPercentageTextField resignFirstResponder];
     
     int numberOfBeers = self.beerCountSlider.value;
     int ouncesInOneBeerGlass = 12;  //assume they are 12oz beer bottles

@@ -24,7 +24,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) viewDidAppear:(BOOL)animated{
+    [self.beerPercentageTextField becomeFirstResponder];
+
+}
 - (IBAction)textFieldDidChange:(UITextField *)sender {
+    //[self.beerPercentageTextField becomeFirstResponder];
     NSString *enteredString = sender.text;
     float enteredNumber =[enteredString floatValue];
     if (enteredNumber == 0) {
@@ -33,7 +39,7 @@
     
 }
 - (IBAction)buttonPressed:(id)sender {
-    [self.beerPercentageTextField resignFirstResponder];
+   // [self.beerPercentageTextField resignFirstResponder];
     
     //Alcohol content in Beer
     int numberOfBeers = self.beerCountSlider.value;
@@ -72,11 +78,11 @@
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider Value is set to  %f",sender.value);
-    [self.beerPercentageTextField resignFirstResponder];
+    //[self.beerPercentageTextField resignFirstResponder];
 }
 
 - (IBAction)tabGestureDidFire:(id)sender {
-    [self.beerPercentageTextField resignFirstResponder];
+   // [self.beerPercentageTextField resignFirstResponder];
 }
 
 @end
