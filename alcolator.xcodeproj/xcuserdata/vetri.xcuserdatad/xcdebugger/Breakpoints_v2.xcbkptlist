@@ -47,6 +47,38 @@
             endingLineNumber = "13"
             landmarkName = "beerPercentageTextField"
             landmarkType = "19">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController beerPercentageTextField]"
+                  moduleName = "alcolator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vetri/Desktop/alcolator/alcolator/ViewController.h"
+                  timestampString = "462343934.410809"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController setBeerPercentageTextField:]"
+                  moduleName = "alcolator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vetri/Desktop/alcolator/alcolator/ViewController.h"
+                  timestampString = "462343934.411018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

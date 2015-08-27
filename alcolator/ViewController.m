@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.descriptionLabel.numberOfLines = 0;
-    self.navigationItem.title = @"Wine";
+  //  self.navigationItem.title = @"Wine";
     // Do any additional setup after loading the view, typically from a nib.
    // [self.resultLabel sizeToFit];
 
@@ -86,6 +86,7 @@
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider Value is set to  %f",sender.value);
     [self.beerPercentageTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 - (IBAction)tabGestureDidFire:(id)sender {

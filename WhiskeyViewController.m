@@ -21,7 +21,7 @@
     
     //coded view and subviews
     self.descriptionLabel.numberOfLines = 0;
-    self.navigationItem.title = @"Whiskey";
+    //self.navigationItem.title = @"Whiskey";
     
 //    self.sampleLabel = [[UILabel alloc] init];
 //    self.sampleLabel.text = @"The quick brown fox jumped over the lazy dog.";
