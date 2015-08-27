@@ -80,13 +80,15 @@
     NSString *resultString = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% of alcohol) contains as much alcohol as %.1f %@ of wine ", nil), numberOfBeers,beerString, [self.beerPercentageTextField.text floatValue], numberOfWineGlassEquivalentOfAlcohol,wineString];
     self.resultLabel.text = resultString;
     [self.resultLabel sizeToFit];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) ceilf(numberOfWineGlassEquivalentOfAlcohol)]];
+
     
 }
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider Value is set to  %f",sender.value);
     [self.beerPercentageTextField resignFirstResponder];
-    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
+//    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 - (IBAction)tabGestureDidFire:(id)sender {
