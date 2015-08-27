@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -17,7 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.descriptionLabel.numberOfLines = 0;
+    self.navigationItem.title = @"Wine";
     // Do any additional setup after loading the view, typically from a nib.
+   // [self.resultLabel sizeToFit];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,12 +30,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void) viewDidAppear:(BOOL)animated{
-    [self.beerPercentageTextField becomeFirstResponder];
-
-}
+//- (void) viewDidAppear:(BOOL)animated{
+//    [self.beerPercentageTextField becomeFirstResponder];
+//    [self.resultLabel sizeToFit];
+//
+//}
 - (IBAction)textFieldDidChange:(UITextField *)sender {
-    //[self.beerPercentageTextField becomeFirstResponder];
+   // [self.beerPercentageTextField becomeFirstResponder];
     NSString *enteredString = sender.text;
     float enteredNumber =[enteredString floatValue];
     if (enteredNumber == 0) {
@@ -39,7 +45,7 @@
     
 }
 - (IBAction)buttonPressed:(id)sender {
-   // [self.beerPercentageTextField resignFirstResponder];
+   [self.beerPercentageTextField resignFirstResponder];
     
     //Alcohol content in Beer
     int numberOfBeers = self.beerCountSlider.value;
@@ -73,16 +79,17 @@
     
     NSString *resultString = [NSString stringWithFormat:NSLocalizedString(@"%d %@ (with %.2f%% of alcohol) contains as much alcohol as %.1f %@ of wine ", nil), numberOfBeers,beerString, [self.beerPercentageTextField.text floatValue], numberOfWineGlassEquivalentOfAlcohol,wineString];
     self.resultLabel.text = resultString;
+    [self.resultLabel sizeToFit];
     
 }
 
 - (IBAction)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider Value is set to  %f",sender.value);
-    //[self.beerPercentageTextField resignFirstResponder];
+    [self.beerPercentageTextField resignFirstResponder];
 }
 
 - (IBAction)tabGestureDidFire:(id)sender {
-   // [self.beerPercentageTextField resignFirstResponder];
+   [self.beerPercentageTextField resignFirstResponder];
 }
 
 @end
