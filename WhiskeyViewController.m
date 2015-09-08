@@ -57,7 +57,7 @@
     float ouncesOfAlcoholPerWhiskeyGlass = ouncesInOneWhiskeyGlass * alcoholPercentageOfWhiskey;
     float numberOfWhiskeyGlassesForEquivalentAlcoholAmount = ouncesOfAlcoholTotal / ouncesOfAlcoholPerWhiskeyGlass;
     
-    NSString *beerText;
+    NSString *beerText; //beer/beers
     
     if (numberOfBeers == 1) {
         beerText = NSLocalizedString(@"beer", @"singular beer");
